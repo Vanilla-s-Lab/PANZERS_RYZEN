@@ -1,5 +1,72 @@
 OpenCore Changelog
 ==================
+#### v0.9.5
+- Fixed GUID formatting for legacy NVRAM saving
+- Fixed inability to open files in root directory on an NTFS filesystem
+- Fixed hang while unloading NTFS driver
+- Added UEFI quirk `ShimRetainProtocol`, allowing OpenCore chained from shim to verify Linux using shim's certificates
+- Added `OpenLegacyBoot` driver for supporting legacy OS booting
+- Added `shim-make.tool` to download and build rhboot/shim, for Linux SBAT and MOK integration
+
+#### v0.9.4
+- Fixed kext blocker `Exclude` strategy for prelinked on 32-bit versions of macOS
+- Fixed `ForceAquantiaEthernet` quirk on macOS 14 beta 2, thx @Shikumo
+- Added `InstanceIdentifier` to OpenCore and option to target `.contentVisibility` to specific instances (thx @dakanji)
+- Improved `LapicKernelPanic` quirk on legacy versions of macOS
+- Allowed `.contentVisibility` in same boot FS root locations as `.VolumeIcon.icns`, in order to survive macOS updates
+- Fixed incorrect core count on Silvermont Atom/Celeron processors
+- Fixed PM timer detection on Silvermont Atom/Celeron processors for TSC calculations
+- Fixed PM timer detection on non-Intel chipsets when booted through OpenDuet
+- Fixed `FadtEnableReset` on NVIDIA nForce chipset platforms
+- Added BlockIoDxe alternative OpenDuet variant
+- Added support for ATI cards when using `ForceResolution` option
+
+#### v0.9.3
+- Added `--force-codec` option to AudioDxe, thx @xCuri0
+- Downgraded additional warning message in normal operation of emulated NVRAM to info
+- Disabled not present DVL0 device in SSDT-SBUS-MCHC by default, thx @stevezhengshiqi
+- Added EFI mandated box drawing, block element and arrow characters to `Builtin` renderer console font
+- Improved support for overlong menu entries and very narrow console modes in builtin picker
+- Made `Builtin` text renderer ignore UI Scale, when required to ensure that text mode reaches minimum UEFI supported size of 80x25
+- Added save and restore of text and graphics mode round tools and failed boot entries
+- Updated out-of-range cursor handling to work round minor display issue in memtest86
+- Added optional `--enable-mouse-click` argument to `CrScreenshotDxe` driver to additionally respond on mouse click
+- Added `--use-conn-none` option to `AudioDxe` driver to discover additional usable output channels on some systems
+- Added `PciIo` protocol override used to fix Aptio IV compatiblity with Above 4G BARs, thx @xCuri0
+- Fixed `AppleXcpmForceBoost` quirk on macOS 14
+- Updated builtin firmware versions for SMBIOS and the rest
+- Added `ConsoleFont` option to load custom console font for `Builtin` renderer
+- Improved `XhciPortLimit` quirk on macOS 11 to 14
+
+#### v0.9.2
+- Added `DisableIoMapperMapping` quirk, thx @CaseySJ
+- Fixed disabling single user mode when Apple Secure Boot is enabled
+- Improved guard checks for `GopBurstMode` on systems where it's not needed
+- Improved compatibility of `GopBurstMode` with some very non-standard GOP implementations
+- Fixed possible hang with `GopBurstMode` enabled on DEBUG builds
+- Enabled `GopBurstMode` even with natively supported cards, in EnableGop firmware driver
+- Fixed inability to patch force-injected kexts
+- Fixed `ExternalDiskIcons` quirk on macOS 13.3+, thx @fusion71au
+- Fixed various recent reversions and some longer-standing minor bugs in `Builtin` text renderer
+- Applied some additional minor optimizations to `Builtin` text renderer
+- Implemented `InitialMode` option to allow fine control over text renderer operating mode
+- Added support for `ConsoleMode` text resolution setting to `Builtin` renderer
+- Fixed regression for ACPI quirks `RebaseRegions` and `SyncTableIds`
+- Updated build process to provide stable and bleeding-edge versions of `EnableGop`
+- Implemented minor improvements in `PickerMode` `Apple`
+- Improved filtering algorithm for `LogModules` and added `?` filter for matching non-standard log lines
+- Fixed crash when gathering system report on virtualised CPUs
+- Fixed unnecessary warning when first booting with emulated NVRAM
+- Enabled `AppleCpuPmCfgLock` quirk on macOS 13
+
+#### v0.9.1
+- Fixed long comment printing for ACPI patches, thx @corpnewt
+- Added sample config for VS Code source level debugging with `gdb`
+- Updated builtin firmware versions for SMBIOS and the rest
+- Added GOP memory caching report to `SysReport`
+- Implemented `GopBurstMode` quirk for faster GOP operation on older firmware
+- Fixed `ThirdPartyDrives` quirk on macOS 13.3 and above
+
 #### v0.9.0
 - Resolved issues with verbose boot log appearing over picker graphics
 - Added version number to EnableGop UI section, so tool builders can track it
@@ -15,8 +82,8 @@ OpenCore Changelog
 - Fixed incomplete console mode initialisation when started in graphics mode
 - Provided additional UEFI forge mode, for use in firmware drivers
 - Implemented firmware driver enabling pre-OpenCore graphics on non-natively supported GPUs on EFI-era Macs
-- Prevented unwanted clear screen to console background colour when in graphics mode
 - Added `ResizeUsePciRbIo` quirk to workaround broken PciIo on some UEFI firmwares, thx @xCuri0
+- Prevented unwanted clear screen to console background colour when in graphics mode
 - Fixed crash while using `SysReport` on older Atom systems
 - Fixed kexts without a Contents folder not being patched during a cacheless boot
 - Added read-only sections (`.rdata`) to all drivers for better memory protection when supported
@@ -44,7 +111,7 @@ OpenCore Changelog
 - Fixed TSC/FSB for AMD CPUs in ProvideCurrentCpuInfo, thx @Shaneee
 - Added `Misc` -> `Boot` -> `HibernateSkipsPicker` not to show picker if waking from macOS hibernation
 - Changed macrecovery to download files into `com.apple.recovery.boot` by default, thx @dreamwhite
-- Supported Apple builtin picker (using `BootKicker.efi` or `PickerMode` `Apple`) when running GPUs without Mac-EFI support on units such as the MacPro5,1 (thx @cdf, @tsialex)
+- Supported Apple native picker (using `BootKicker.efi` or `PickerMode` `Apple`) when running GPUs without Mac-EFI support on units such as the MacPro5,1 (thx @cdf, @tsialex)
 - Enabled `PickerMode` `Apple` to successfully launch selected entry
 - Enabled `BootKicker.efi` to successfully launch selected entry (via reboot) (thx @cdf)
 - Added spoof proof UEFI 2.x checking to OpenVariableRuntimeDxe, thx @dakanji
