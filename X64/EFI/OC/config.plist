@@ -1474,23 +1474,23 @@
 			<key>AdviseFeatures</key>
 			<false/>
 			<key>MLB</key>
-			<string>F5K9518024NK3F7JC</string>
+			<string>C02139130CDPHC1AD</string>
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>ROM</key>
-			<data>AB1PDV4i</data>
+			<data>IKLkgFEl</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemMemoryStatus</key>
 			<string>Auto</string>
 			<key>SystemProductName</key>
-			<string>MacPro7,1</string>
+			<string>iMac20,1</string>
 			<key>SystemSerialNumber</key>
-			<string>F5KZV0JVP7QM</string>
+			<string>C02GGUZWPN5T</string>
 			<key>SystemUUID</key>
-			<string>535B897C-55F7-4D65-A8F4-40F4B96ED394</string>
+			<string>4959FA5B-15A2-4966-BE5A-CA16943E726B</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
