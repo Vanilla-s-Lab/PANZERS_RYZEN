@@ -16,6 +16,33 @@ https://item.jd.com/10034287970345.html
 
 https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html#amd-bios-settings
 
+### BIOS
+
+- `Boot` - `Fast Boot` = Disabled
+- `Security` - `Secure Boot` - `Secure Boot` = Disabled
+- `Advanced` - `Onboard Devices Configuration` - `Serial Port` = Disabled
+- `Boot` - `CSM(Compatibility Support Module)` - `CSM` = Disabled
+- `Advanced` - `CPU Configuration` - `IOMMU` = Disabled
+
+
+- `Advanced` - `Storage Configuration` - `SATA Mode` = AHCI
+
 ## Post-Install
 
 https://github.com/DavidS95/Smokeless_UMAF
+
+### BIOS
+
+- Device Manager
+  - PCI Subsystem Settings
+    - Above 4G Decoding = [x]
+    - Re-Size BAR Support = \<Auto>
+  - Setup - Advanced - USB Configuration - XHCI Hand-off = \<Enabled>
+
+### Credit
+
+https://www.reddit.com/r/hackintosh/comments/15pzwhw/nootedred_and_vendor_locked_uma_buffer_sizes/
+
+- Device Manager - AMD CBS - NBIO Common Options - GFX Configuration
+  - iGPU Configuration = <UMA_SPECIFIED>
+  - UMA Frame fuffer Size = <2G>
