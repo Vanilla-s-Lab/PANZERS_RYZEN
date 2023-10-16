@@ -11,3 +11,11 @@ https://item.jd.com/10034287970345.html
 
 - WiFi: Comfast CF-812AC (https://comfastlink.com/comfast-cf-812ac-1300mbps-usb-3-wifi-network-card)
   - Driver Program: Mac (http://en.comfast.com.cn/index.php?m=content&c=index&a=show&catid=30&id=348)
+
+## Pre-Install
+
+https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html#amd-bios-settings
+
+## Post-Install
+
+https://github.com/DavidS95/Smokeless_UMAF
