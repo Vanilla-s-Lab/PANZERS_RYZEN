@@ -46,3 +46,8 @@ https://www.reddit.com/r/hackintosh/comments/15pzwhw/nootedred_and_vendor_locked
 - Device Manager - AMD CBS - NBIO Common Options - GFX Configuration
   - iGPU Configuration = <UMA_SPECIFIED>
   - UMA Frame fuffer Size = <2G>
+
+## Accessories
+
+- https://item.jd.com/100027284859.html
+- https://item.taobao.com/item.htm?id=680228842890
