@@ -26,3 +26,13 @@ use_latest_release = true
 source = "git"
 git = "https://github.com/ChefKissInc/NootedRed.git"
 use_commit = true
+
+[SSDT-CPUR_aml]
+source = "github"
+github = "dortania/Getting-Started-With-ACPI"
+path = "extra-files/compiled/SSDT-CPUR.aml"
+
+[SSDT-EC-USBX-DESKTOP_aml]
+source = "github"
+github = "dortania/Getting-Started-With-ACPI"
+path = "extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml"

@@ -3,5 +3,7 @@
   "Lilu": "1.6.7",
   "NootedRed": "c11817782db417ab33d2d233aa32168cda0c2f09",
   "OpenCorePkg": "0.9.5",
+  "SSDT-CPUR_aml": "20211013.215050",
+  "SSDT-EC-USBX-DESKTOP_aml": "20210202.234748",
   "VirtualSMC": "1.3.2"
 }
