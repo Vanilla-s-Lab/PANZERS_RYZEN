@@ -36,3 +36,23 @@ path = "extra-files/compiled/SSDT-CPUR.aml"
 source = "github"
 github = "dortania/Getting-Started-With-ACPI"
 path = "extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml"
+
+[USBToolBox]
+source = "github"
+github = "USBToolBox/kext"
+use_latest_release = true
+
+[AppleALC]
+source = "github"
+github = "acidanthera/AppleALC"
+use_latest_release = true
+
+[AMDRyzenCPUPowerManagement]
+source = "github"
+github = "trulyspinach/SMCAMDProcessor"
+use_latest_release = true
+
+[SMCRadeonGPU]
+source = "github"
+github = "ChefKissInc/RadeonSensor"
+use_latest_release = true
