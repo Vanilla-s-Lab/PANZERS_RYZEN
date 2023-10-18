@@ -1,0 +1,24 @@
+[OpenCorePkg]
+source = "github"
+github = "acidanthera/OpenCorePkg"
+use_latest_release = true
+
+[HfsPlus_efi]
+source = "github"
+github = "acidanthera/OcBinaryData"
+path = "Drivers/HfsPlus.efi"
+
+[Lilu]
+source = "github"
+github = "acidanthera/Lilu"
+use_latest_release = true
+
+[VirtualSMC]
+source = "github"
+github = "acidanthera/VirtualSMC"
+use_latest_release = true
+
+[NootedRed]
+source = "git"
+git = "https://github.com/ChefKissInc/NootedRed.git"
+use_commit = true
