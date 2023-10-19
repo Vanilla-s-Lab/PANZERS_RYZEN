@@ -4,7 +4,7 @@
   "BrcmPatchRAM": "2.6.8",
   "HfsPlus_efi": "20230104.153624",
   "Lilu": "1.6.7",
-  "NootedRed": "c11817782db417ab33d2d233aa32168cda0c2f09",
+  "NootedRed": "59ff13695fccc50b0f6d4349290e9e46d034aff3",
   "OpenCorePkg": "0.9.5",
   "SMCRadeonGPU": "v1.3.0",
   "SSDT-CPUR_aml": "20211013.215050",
