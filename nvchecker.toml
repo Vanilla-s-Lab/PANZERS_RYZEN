@@ -56,3 +56,8 @@ use_latest_release = true
 source = "github"
 github = "ChefKissInc/RadeonSensor"
 use_latest_release = true
+
+[BrcmPatchRAM]
+source = "github"
+github = "acidanthera/BrcmPatchRAM"
+use_latest_release = true
