@@ -55,7 +55,3 @@ https://www.reddit.com/r/hackintosh/comments/15pzwhw/nootedred_and_vendor_locked
 
 - https://item.jd.com/100027284859.html
 - https://item.taobao.com/item.htm?id=680228842890
-
-## Reference
-
-- https://github.com/d3fa/MACOS-EFI-Gigabyte-Z370-QTJ1-UHD630

@@ -1,7 +1,6 @@
 {
   "AMDRyzenCPUPowerManagement": "0.7.1",
   "AppleALC": "1.8.6",
-  "BrcmPatchRAM": "2.6.8",
   "HfsPlus_efi": "20230104.153624",
   "Lilu": "1.6.7",
   "NootedRed": "9e78893bf877472716784721e32b38c1b043fadd",
