@@ -56,3 +56,18 @@ use_latest_release = true
 source = "github"
 github = "ChefKissInc/RadeonSensor"
 use_latest_release = true
+
+[BlueToolFixup]
+source = "github"
+github = "acidanthera/BrcmPatchRAM"
+use_latest_release = true
+
+[IntelBluetoothFirmware]
+source = "github"
+github = "OpenIntelWireless/IntelBluetoothFirmware"
+use_latest_release = true
+
+[AirportItlwm]
+source = "github"
+github = "OpenIntelWireless/itlwm"
+use_latest_release = true
