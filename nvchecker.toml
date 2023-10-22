@@ -71,3 +71,8 @@ use_latest_release = true
 source = "github"
 github = "OpenIntelWireless/itlwm"
 use_latest_release = true
+
+[Resources]
+source = "github"
+github = "acidanthera/OcBinaryData"
+path = "Resources"
